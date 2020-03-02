@@ -8,17 +8,17 @@ Forked from https://github.com/productionwentdown/caddy
 
 Serve files in `$PWD`:
 ```
-docker run -it --rm -p 2015:2015 -v $PWD:/srv productionwentdown/caddy
+docker run -it --rm -p 2015:2015 -v $PWD:/srv lechgu/caddy
 ```
 
 Overwrite `Caddyfile`:
 ```
-docker run -it --rm -p 2015:2015 -v $PWD:/srv -v $PWD/Caddyfile:/etc/Caddyfile productionwentdown/caddy
+docker run -it --rm -p 2015:2015 -v $PWD:/srv -v $PWD/Caddyfile:/etc/Caddyfile lechgu/caddy
 ```
 
 Persist `.caddy` to avoid hitting Let's Encrypt's rate limit:
 ```
-docker run -it --rm -p 2015:2015 -v $PWD:/srv -v $PWD/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/etc/.caddy productionwentdown/caddy
+docker run -it --rm -p 2015:2015 -v $PWD:/srv -v $PWD/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/etc/.caddy lechgu/caddy
 ```
 
 # Build with plugins
